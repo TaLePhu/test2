@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part 2-2</title>
+</head>
+
+<body>
+    <h1>part 2-2: calculator tip</h1>
+</body>
+
+<script>
+// 1. Viết hàm tính tiền boa
+    const calctip = (bill) => (bill >= 50 && bill <= 300)? bill*0.15 : bill*0.2;
+
+// Kiểm tra hàm với giá trị hóa đơn là 100
+    console.log(calctip(100))
+
+// 2. Tạo mảng bills với dữ liệu kiểm tra
+    const bills = [ 125, 555 ,44]
+
+// 3. Tạo mảng tips chứa tiền boa được tính từ hàm calcTip
+    const tip = bills.map(calctip)
+
+// 4. Bonus: Tạo mảng total chứa tổng giá trị hóa đơn và tiền boa
+    const total = bills.map((bill, index) => bill +tip[index]);
+
+// In ra kết quả
+    console.log(bills)
+    console.log(tip)
+    console.log(total)
+</script>
+</html>
